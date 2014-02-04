@@ -10,6 +10,7 @@
 		1F800BF364CB49798AB24AE9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9773089647439D973C3720 /* libPods.a */; };
 		470F245F18A0FF0200DD05B0 /* HRYGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 470F245D18A0FF0200DD05B0 /* HRYGalleryViewController.m */; };
 		470F246018A0FF0200DD05B0 /* HRYGalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 470F245E18A0FF0200DD05B0 /* HRYGalleryViewController.xib */; };
+		470F246418A0FF7800DD05B0 /* HRYGalleryFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 470F246318A0FF7800DD05B0 /* HRYGalleryFlowLayout.m */; };
 		47ABC82C18A0FB0A007A953F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ABC82B18A0FB0A007A953F /* Foundation.framework */; };
 		47ABC82E18A0FB0A007A953F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ABC82D18A0FB0A007A953F /* CoreGraphics.framework */; };
 		47ABC83018A0FB0A007A953F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ABC82F18A0FB0A007A953F /* UIKit.framework */; };
@@ -42,6 +43,8 @@
 		470F245C18A0FF0200DD05B0 /* HRYGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRYGalleryViewController.h; path = Classes/ViewControllers/HRYGalleryViewController.h; sourceTree = "<group>"; };
 		470F245D18A0FF0200DD05B0 /* HRYGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRYGalleryViewController.m; path = Classes/ViewControllers/HRYGalleryViewController.m; sourceTree = "<group>"; };
 		470F245E18A0FF0200DD05B0 /* HRYGalleryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HRYGalleryViewController.xib; path = Classes/ViewControllers/HRYGalleryViewController.xib; sourceTree = "<group>"; };
+		470F246218A0FF7800DD05B0 /* HRYGalleryFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRYGalleryFlowLayout.h; path = Classes/Layouts/HRYGalleryFlowLayout.h; sourceTree = "<group>"; };
+		470F246318A0FF7800DD05B0 /* HRYGalleryFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRYGalleryFlowLayout.m; path = Classes/Layouts/HRYGalleryFlowLayout.m; sourceTree = "<group>"; };
 		47ABC82818A0FB0A007A953F /* FunctionalReactivePixels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunctionalReactivePixels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47ABC82B18A0FB0A007A953F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		47ABC82D18A0FB0A007A953F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -95,6 +98,7 @@
 		470F245A18A0FE5A00DD05B0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				470F246118A0FF4F00DD05B0 /* Layouts */,
 				470F245B18A0FEDB00DD05B0 /* ViewControllers */,
 			);
 			name = Classes;
@@ -108,6 +112,15 @@
 				470F245E18A0FF0200DD05B0 /* HRYGalleryViewController.xib */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		470F246118A0FF4F00DD05B0 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				470F246218A0FF7800DD05B0 /* HRYGalleryFlowLayout.h */,
+				470F246318A0FF7800DD05B0 /* HRYGalleryFlowLayout.m */,
+			);
+			name = Layouts;
 			sourceTree = "<group>";
 		};
 		47ABC81F18A0FB0A007A953F = {
@@ -356,6 +369,7 @@
 			files = (
 				47ABC83C18A0FB0A007A953F /* HRYAppDelegate.m in Sources */,
 				47ABC84218A0FB0A007A953F /* HRYViewController.m in Sources */,
+				470F246418A0FF7800DD05B0 /* HRYGalleryFlowLayout.m in Sources */,
 				47ABC83818A0FB0A007A953F /* main.m in Sources */,
 				470F245F18A0FF0200DD05B0 /* HRYGalleryViewController.m in Sources */,
 			);

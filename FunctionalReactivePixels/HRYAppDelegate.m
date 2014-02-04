@@ -8,11 +8,20 @@
 
 #import "HRYAppDelegate.h"
 #import "HRYGalleryViewController.h"
+#import "HRYUserDefaults.h"
 
 @implementation HRYAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [HRYUserDefaults configureDefaults];
+
+    HRYUserDefaults *userDefaults = [HRYUserDefaults standardUserDefaults];
+    NSString *consumerKey = [userDefaults stringForKey:HRYUserDefaultsConsumerKey];
+    NSString *consumerSecret = [userDefaults stringForKey:HRYUserDefaultsConsumerSecret];
+
+    [PXRequest setConsumerKey:consumerKey consumerSecret:consumerSecret];
+
     HRYGalleryViewController *vc = [HRYGalleryViewController new];
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
 

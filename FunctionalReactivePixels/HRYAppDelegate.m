@@ -7,12 +7,20 @@
 //
 
 #import "HRYAppDelegate.h"
+#import "HRYGalleryViewController.h"
 
 @implementation HRYAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    HRYGalleryViewController *vc = [HRYGalleryViewController new];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = nc;
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 							

@@ -9,7 +9,7 @@
 @import Foundation;
 
 UIKIT_EXTERN NSString * const HRYUserDefaultsConsumerKey;
-UIKIT_EXTERN NSString * const HRYUserDefualtsConsumerSecret;
+UIKIT_EXTERN NSString * const HRYUserDefaultsConsumerSecret;
 
 @interface HRYUserDefaults : NSUserDefaults
 

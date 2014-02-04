@@ -17,7 +17,6 @@
 		47ABC83818A0FB0A007A953F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ABC83718A0FB0A007A953F /* main.m */; };
 		47ABC83C18A0FB0A007A953F /* HRYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ABC83B18A0FB0A007A953F /* HRYAppDelegate.m */; };
 		47ABC83F18A0FB0A007A953F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47ABC83D18A0FB0A007A953F /* Main.storyboard */; };
-		47ABC84218A0FB0A007A953F /* HRYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ABC84118A0FB0A007A953F /* HRYViewController.m */; };
 		47ABC84418A0FB0A007A953F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47ABC84318A0FB0A007A953F /* Images.xcassets */; };
 		47ABC84B18A0FB0A007A953F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ABC84A18A0FB0A007A953F /* XCTest.framework */; };
 		47ABC84C18A0FB0A007A953F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ABC82B18A0FB0A007A953F /* Foundation.framework */; };
@@ -54,8 +53,6 @@
 		47ABC83A18A0FB0A007A953F /* HRYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRYAppDelegate.h; sourceTree = "<group>"; };
 		47ABC83B18A0FB0A007A953F /* HRYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRYAppDelegate.m; sourceTree = "<group>"; };
 		47ABC83E18A0FB0A007A953F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		47ABC84018A0FB0A007A953F /* HRYViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRYViewController.h; sourceTree = "<group>"; };
-		47ABC84118A0FB0A007A953F /* HRYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRYViewController.m; sourceTree = "<group>"; };
 		47ABC84318A0FB0A007A953F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		47ABC84918A0FB0A007A953F /* FunctionalReactivePixelsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunctionalReactivePixelsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47ABC84A18A0FB0A007A953F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -161,8 +158,6 @@
 				47ABC83A18A0FB0A007A953F /* HRYAppDelegate.h */,
 				47ABC83B18A0FB0A007A953F /* HRYAppDelegate.m */,
 				47ABC83D18A0FB0A007A953F /* Main.storyboard */,
-				47ABC84018A0FB0A007A953F /* HRYViewController.h */,
-				47ABC84118A0FB0A007A953F /* HRYViewController.m */,
 				47ABC84318A0FB0A007A953F /* Images.xcassets */,
 				47ABC83218A0FB0A007A953F /* Supporting Files */,
 			);
@@ -364,7 +359,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				47ABC83C18A0FB0A007A953F /* HRYAppDelegate.m in Sources */,
-				47ABC84218A0FB0A007A953F /* HRYViewController.m in Sources */,
 				470F246418A0FF7800DD05B0 /* HRYGalleryFlowLayout.m in Sources */,
 				47ABC83818A0FB0A007A953F /* main.m in Sources */,
 				470F245F18A0FF0200DD05B0 /* HRYGalleryViewController.m in Sources */,

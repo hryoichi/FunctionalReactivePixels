@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		47ABC82C18A0FB0A007A953F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ABC82B18A0FB0A007A953F /* Foundation.framework */; };
+		47ABC82E18A0FB0A007A953F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ABC82D18A0FB0A007A953F /* CoreGraphics.framework */; };
+		47ABC83018A0FB0A007A953F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ABC82F18A0FB0A007A953F /* UIKit.framework */; };
+		47ABC83618A0FB0A007A953F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47ABC83418A0FB0A007A953F /* InfoPlist.strings */; };
+		47ABC83818A0FB0A007A953F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ABC83718A0FB0A007A953F /* main.m */; };
+		47ABC83C18A0FB0A007A953F /* HRYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ABC83B18A0FB0A007A953F /* HRYAppDelegate.m */; };
+		47ABC83F18A0FB0A007A953F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47ABC83D18A0FB0A007A953F /* Main.storyboard */; };
+		47ABC84218A0FB0A007A953F /* HRYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ABC84118A0FB0A007A953F /* HRYViewController.m */; };
+		47ABC84418A0FB0A007A953F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47ABC84318A0FB0A007A953F /* Images.xcassets */; };
+		47ABC84B18A0FB0A007A953F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ABC84A18A0FB0A007A953F /* XCTest.framework */; };
+		47ABC84C18A0FB0A007A953F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ABC82B18A0FB0A007A953F /* Foundation.framework */; };
+		47ABC84D18A0FB0A007A953F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ABC82F18A0FB0A007A953F /* UIKit.framework */; };
+		47ABC85518A0FB0A007A953F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47ABC85318A0FB0A007A953F /* InfoPlist.strings */; };
+		47ABC85718A0FB0A007A953F /* FunctionalReactivePixelsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ABC85618A0FB0A007A953F /* FunctionalReactivePixelsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		47ABC84E18A0FB0A007A953F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47ABC82018A0FB0A007A953F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47ABC82718A0FB0A007A953F;
+			remoteInfo = FunctionalReactivePixels;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		47ABC82818A0FB0A007A953F /* FunctionalReactivePixels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunctionalReactivePixels.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47ABC82B18A0FB0A007A953F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		47ABC82D18A0FB0A007A953F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		47ABC82F18A0FB0A007A953F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		47ABC83318A0FB0A007A953F /* FunctionalReactivePixels-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FunctionalReactivePixels-Info.plist"; sourceTree = "<group>"; };
+		47ABC83518A0FB0A007A953F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		47ABC83718A0FB0A007A953F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		47ABC83918A0FB0A007A953F /* FunctionalReactivePixels-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FunctionalReactivePixels-Prefix.pch"; sourceTree = "<group>"; };
+		47ABC83A18A0FB0A007A953F /* HRYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRYAppDelegate.h; sourceTree = "<group>"; };
+		47ABC83B18A0FB0A007A953F /* HRYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRYAppDelegate.m; sourceTree = "<group>"; };
+		47ABC83E18A0FB0A007A953F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		47ABC84018A0FB0A007A953F /* HRYViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRYViewController.h; sourceTree = "<group>"; };
+		47ABC84118A0FB0A007A953F /* HRYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRYViewController.m; sourceTree = "<group>"; };
+		47ABC84318A0FB0A007A953F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		47ABC84918A0FB0A007A953F /* FunctionalReactivePixelsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunctionalReactivePixelsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		47ABC84A18A0FB0A007A953F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		47ABC85218A0FB0A007A953F /* FunctionalReactivePixelsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FunctionalReactivePixelsTests-Info.plist"; sourceTree = "<group>"; };
+		47ABC85418A0FB0A007A953F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		47ABC85618A0FB0A007A953F /* FunctionalReactivePixelsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionalReactivePixelsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		47ABC82518A0FB0A007A953F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47ABC82E18A0FB0A007A953F /* CoreGraphics.framework in Frameworks */,
+				47ABC83018A0FB0A007A953F /* UIKit.framework in Frameworks */,
+				47ABC82C18A0FB0A007A953F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47ABC84618A0FB0A007A953F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47ABC84B18A0FB0A007A953F /* XCTest.framework in Frameworks */,
+				47ABC84D18A0FB0A007A953F /* UIKit.framework in Frameworks */,
+				47ABC84C18A0FB0A007A953F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		47ABC81F18A0FB0A007A953F = {
+			isa = PBXGroup;
+			children = (
+				47ABC83118A0FB0A007A953F /* FunctionalReactivePixels */,
+				47ABC85018A0FB0A007A953F /* FunctionalReactivePixelsTests */,
+				47ABC82A18A0FB0A007A953F /* Frameworks */,
+				47ABC82918A0FB0A007A953F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		47ABC82918A0FB0A007A953F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				47ABC82818A0FB0A007A953F /* FunctionalReactivePixels.app */,
+				47ABC84918A0FB0A007A953F /* FunctionalReactivePixelsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		47ABC82A18A0FB0A007A953F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47ABC82B18A0FB0A007A953F /* Foundation.framework */,
+				47ABC82D18A0FB0A007A953F /* CoreGraphics.framework */,
+				47ABC82F18A0FB0A007A953F /* UIKit.framework */,
+				47ABC84A18A0FB0A007A953F /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		47ABC83118A0FB0A007A953F /* FunctionalReactivePixels */ = {
+			isa = PBXGroup;
+			children = (
+				47ABC83A18A0FB0A007A953F /* HRYAppDelegate.h */,
+				47ABC83B18A0FB0A007A953F /* HRYAppDelegate.m */,
+				47ABC83D18A0FB0A007A953F /* Main.storyboard */,
+				47ABC84018A0FB0A007A953F /* HRYViewController.h */,
+				47ABC84118A0FB0A007A953F /* HRYViewController.m */,
+				47ABC84318A0FB0A007A953F /* Images.xcassets */,
+				47ABC83218A0FB0A007A953F /* Supporting Files */,
+			);
+			path = FunctionalReactivePixels;
+			sourceTree = "<group>";
+		};
+		47ABC83218A0FB0A007A953F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47ABC83318A0FB0A007A953F /* FunctionalReactivePixels-Info.plist */,
+				47ABC83418A0FB0A007A953F /* InfoPlist.strings */,
+				47ABC83718A0FB0A007A953F /* main.m */,
+				47ABC83918A0FB0A007A953F /* FunctionalReactivePixels-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		47ABC85018A0FB0A007A953F /* FunctionalReactivePixelsTests */ = {
+			isa = PBXGroup;
+			children = (
+				47ABC85618A0FB0A007A953F /* FunctionalReactivePixelsTests.m */,
+				47ABC85118A0FB0A007A953F /* Supporting Files */,
+			);
+			path = FunctionalReactivePixelsTests;
+			sourceTree = "<group>";
+		};
+		47ABC85118A0FB0A007A953F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47ABC85218A0FB0A007A953F /* FunctionalReactivePixelsTests-Info.plist */,
+				47ABC85318A0FB0A007A953F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		47ABC82718A0FB0A007A953F /* FunctionalReactivePixels */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47ABC85A18A0FB0A007A953F /* Build configuration list for PBXNativeTarget "FunctionalReactivePixels" */;
+			buildPhases = (
+				47ABC82418A0FB0A007A953F /* Sources */,
+				47ABC82518A0FB0A007A953F /* Frameworks */,
+				47ABC82618A0FB0A007A953F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FunctionalReactivePixels;
+			productName = FunctionalReactivePixels;
+			productReference = 47ABC82818A0FB0A007A953F /* FunctionalReactivePixels.app */;
+			productType = "com.apple.product-type.application";
+		};
+		47ABC84818A0FB0A007A953F /* FunctionalReactivePixelsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47ABC85D18A0FB0A007A953F /* Build configuration list for PBXNativeTarget "FunctionalReactivePixelsTests" */;
+			buildPhases = (
+				47ABC84518A0FB0A007A953F /* Sources */,
+				47ABC84618A0FB0A007A953F /* Frameworks */,
+				47ABC84718A0FB0A007A953F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47ABC84F18A0FB0A007A953F /* PBXTargetDependency */,
+			);
+			name = FunctionalReactivePixelsTests;
+			productName = FunctionalReactivePixelsTests;
+			productReference = 47ABC84918A0FB0A007A953F /* FunctionalReactivePixelsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		47ABC82018A0FB0A007A953F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HRY;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Ryoichi Hara";
+				TargetAttributes = {
+					47ABC84818A0FB0A007A953F = {
+						TestTargetID = 47ABC82718A0FB0A007A953F;
+					};
+				};
+			};
+			buildConfigurationList = 47ABC82318A0FB0A007A953F /* Build configuration list for PBXProject "FunctionalReactivePixels" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 47ABC81F18A0FB0A007A953F;
+			productRefGroup = 47ABC82918A0FB0A007A953F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				47ABC82718A0FB0A007A953F /* FunctionalReactivePixels */,
+				47ABC84818A0FB0A007A953F /* FunctionalReactivePixelsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		47ABC82618A0FB0A007A953F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47ABC84418A0FB0A007A953F /* Images.xcassets in Resources */,
+				47ABC83618A0FB0A007A953F /* InfoPlist.strings in Resources */,
+				47ABC83F18A0FB0A007A953F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47ABC84718A0FB0A007A953F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47ABC85518A0FB0A007A953F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		47ABC82418A0FB0A007A953F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47ABC83C18A0FB0A007A953F /* HRYAppDelegate.m in Sources */,
+				47ABC84218A0FB0A007A953F /* HRYViewController.m in Sources */,
+				47ABC83818A0FB0A007A953F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47ABC84518A0FB0A007A953F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47ABC85718A0FB0A007A953F /* FunctionalReactivePixelsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		47ABC84F18A0FB0A007A953F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47ABC82718A0FB0A007A953F /* FunctionalReactivePixels */;
+			targetProxy = 47ABC84E18A0FB0A007A953F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		47ABC83418A0FB0A007A953F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47ABC83518A0FB0A007A953F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		47ABC83D18A0FB0A007A953F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47ABC83E18A0FB0A007A953F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		47ABC85318A0FB0A007A953F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47ABC85418A0FB0A007A953F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		47ABC85818A0FB0A007A953F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		47ABC85918A0FB0A007A953F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		47ABC85B18A0FB0A007A953F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FunctionalReactivePixels/FunctionalReactivePixels-Prefix.pch";
+				INFOPLIST_FILE = "FunctionalReactivePixels/FunctionalReactivePixels-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		47ABC85C18A0FB0A007A953F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FunctionalReactivePixels/FunctionalReactivePixels-Prefix.pch";
+				INFOPLIST_FILE = "FunctionalReactivePixels/FunctionalReactivePixels-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		47ABC85E18A0FB0A007A953F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FunctionalReactivePixels.app/FunctionalReactivePixels";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FunctionalReactivePixels/FunctionalReactivePixels-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FunctionalReactivePixelsTests/FunctionalReactivePixelsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		47ABC85F18A0FB0A007A953F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FunctionalReactivePixels.app/FunctionalReactivePixels";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FunctionalReactivePixels/FunctionalReactivePixels-Prefix.pch";
+				INFOPLIST_FILE = "FunctionalReactivePixelsTests/FunctionalReactivePixelsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		47ABC82318A0FB0A007A953F /* Build configuration list for PBXProject "FunctionalReactivePixels" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47ABC85818A0FB0A007A953F /* Debug */,
+				47ABC85918A0FB0A007A953F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47ABC85A18A0FB0A007A953F /* Build configuration list for PBXNativeTarget "FunctionalReactivePixels" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47ABC85B18A0FB0A007A953F /* Debug */,
+				47ABC85C18A0FB0A007A953F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		47ABC85D18A0FB0A007A953F /* Build configuration list for PBXNativeTarget "FunctionalReactivePixelsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47ABC85E18A0FB0A007A953F /* Debug */,
+				47ABC85F18A0FB0A007A953F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 47ABC82018A0FB0A007A953F /* Project object */;
+}

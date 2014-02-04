@@ -10,4 +10,15 @@
 
 @implementation HRYGalleryFlowLayout
 
+- (id)init
+{
+    if (self = [super init]) {
+        self.itemSize = CGSizeMake(145.0f, 145.0f);
+        self.minimumInteritemSpacing = 10.0f;
+        self.minimumLineSpacing = 10.0f;
+        self.sectionInset = UIEdgeInsetsMake(10.0f, 10.0f, 10.0f, 10.0f);
+    }
+    return self;
+}
+
 @end

@@ -8,6 +8,9 @@
 
 #import "HRYUserDefaults.h"
 
+NSString * const HRYUserDefaultsConsumerKey    = @"consumerKey";
+NSString * const HRYUserDefaultsConsumerSecret = @"consumerSecret";
+
 @implementation HRYUserDefaults
 
 + (void)configureDefaults

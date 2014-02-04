@@ -7,6 +7,7 @@
 //
 
 #import "HRYGalleryViewController.h"
+#import "HRYGalleryFlowLayout.h"
 
 @interface HRYGalleryViewController ()
 
@@ -14,11 +15,10 @@
 
 @implementation HRYGalleryViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    if (self = [super initWithCollectionViewLayout:[HRYGalleryFlowLayout new]]) {
+        // Custom Initialization
     }
     return self;
 }
@@ -26,13 +26,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

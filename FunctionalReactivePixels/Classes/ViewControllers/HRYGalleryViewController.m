@@ -8,16 +8,16 @@
 
 #import "HRYGalleryViewController.h"
 #import "HRYGalleryFlowLayout.h"
-#import "HRYPhotoImporter.h"
 #import "HRYCell.h"
 #import "HRYFullSizePhotoViewController.h"
-#import <ReactiveCocoa/ReactiveCocoa/RACDelegateProxy.h>
+#import "HRYFullSizePhotoViewModel.h"
+#import "HRYGalleryViewModel.h"
 
 static NSString * const kCellIdentifier = @"Cell";
 
 @interface HRYGalleryViewController ()
 
-@property (nonatomic, strong) NSArray *photosArray;
+@property (nonatomic, strong) HRYGalleryViewModel *viewModel;
 
 @end
 
@@ -28,7 +28,7 @@ static NSString * const kCellIdentifier = @"Cell";
 - (id)init
 {
     if (self = [super initWithCollectionViewLayout:[HRYGalleryFlowLayout new]]) {
-        // Custom Initialization
+        self.viewModel = [HRYGalleryViewModel new];
     }
     return self;
 }
@@ -42,7 +42,7 @@ static NSString * const kCellIdentifier = @"Cell";
     [self.collectionView registerClass:[HRYCell class] forCellWithReuseIdentifier:kCellIdentifier];
 
     @weakify(self);
-    [RACObserve(self, photosArray) subscribeNext:^(id x) {
+    [RACObserve(self.viewModel, model) subscribeNext:^(id x) {
         @strongify(self);
         [self.collectionView reloadData];
     }];
@@ -54,17 +54,16 @@ static NSString * const kCellIdentifier = @"Cell";
 
     [[self rac_signalForSelector:@selector(collectionView:didSelectItemAtIndexPath:) fromProtocol:@protocol(UICollectionViewDelegate)] subscribeNext:^(RACTuple *arguments) {
         @strongify(self);
-        HRYFullSizePhotoViewController *viewController =
-        [[HRYFullSizePhotoViewController alloc] initWithPhotoModels:self.photosArray
-                                                  currentPhotoIndex:[(NSIndexPath *)arguments.second item]];
+
+        NSIndexPath *indexPath = arguments.second;
+        HRYFullSizePhotoViewModel *viewModel =
+        [[HRYFullSizePhotoViewModel alloc] initWithPhotoArray:self.viewModel.model initialPhotoIndex:indexPath.item];
+
+        HRYFullSizePhotoViewController *viewController = [HRYFullSizePhotoViewController new];
+        viewController.viewModel = viewModel;
         viewController.delegate = (id<HRYFullSizePhotoViewControllerDelegate>)self;
         [self.navigationController pushViewController:viewController animated:YES];
     }];
-
-    RAC(self, photosArray) = [[[[HRYPhotoImporter importPhotos] doCompleted:^{
-        @strongify(self);
-        [self.collectionView reloadData];
-    }] logError] catchTo:[RACSignal empty]];
 
     // NOTE: Need to "reset" the cached values of respondsToSelector: of UIKit
     self.collectionView.delegate = self;
@@ -83,14 +82,14 @@ static NSString * const kCellIdentifier = @"Cell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return [self.photosArray count];
+    return [self.viewModel.model count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     HRYCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCellIdentifier forIndexPath:indexPath];
 
-    [cell setPhotoModel:self.photosArray[indexPath.row]];
+    [cell setPhotoModel:self.viewModel.model[indexPath.row]];
 
     return cell;
 }

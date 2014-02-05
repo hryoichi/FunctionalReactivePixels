@@ -15,6 +15,7 @@
 		470F246E18A10E0F00DD05B0 /* HRYPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 470F246D18A10E0F00DD05B0 /* HRYPhotoModel.m */; };
 		470F247118A10E8900DD05B0 /* HRYPhotoImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 470F247018A10E8900DD05B0 /* HRYPhotoImporter.m */; };
 		475C333218A1D78B00789A53 /* HRYCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 475C333118A1D78B00789A53 /* HRYCell.m */; };
+		475C333518A1DDCB00789A53 /* HRYFullSizePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475C333418A1DDCB00789A53 /* HRYFullSizePhotoViewController.m */; };
 		47ABC82C18A0FB0A007A953F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ABC82B18A0FB0A007A953F /* Foundation.framework */; };
 		47ABC82E18A0FB0A007A953F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ABC82D18A0FB0A007A953F /* CoreGraphics.framework */; };
 		47ABC83018A0FB0A007A953F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ABC82F18A0FB0A007A953F /* UIKit.framework */; };
@@ -56,6 +57,8 @@
 		470F247018A10E8900DD05B0 /* HRYPhotoImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRYPhotoImporter.m; path = Classes/Helpers/HRYPhotoImporter.m; sourceTree = "<group>"; };
 		475C333018A1D78B00789A53 /* HRYCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRYCell.h; path = Classes/Cells/HRYCell.h; sourceTree = "<group>"; };
 		475C333118A1D78B00789A53 /* HRYCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRYCell.m; path = Classes/Cells/HRYCell.m; sourceTree = "<group>"; };
+		475C333318A1DDCB00789A53 /* HRYFullSizePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRYFullSizePhotoViewController.h; path = Classes/ViewControllers/HRYFullSizePhotoViewController.h; sourceTree = "<group>"; };
+		475C333418A1DDCB00789A53 /* HRYFullSizePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRYFullSizePhotoViewController.m; path = Classes/ViewControllers/HRYFullSizePhotoViewController.m; sourceTree = "<group>"; };
 		47ABC82818A0FB0A007A953F /* FunctionalReactivePixels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunctionalReactivePixels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47ABC82B18A0FB0A007A953F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		47ABC82D18A0FB0A007A953F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -121,6 +124,8 @@
 			children = (
 				470F245C18A0FF0200DD05B0 /* HRYGalleryViewController.h */,
 				470F245D18A0FF0200DD05B0 /* HRYGalleryViewController.m */,
+				475C333318A1DDCB00789A53 /* HRYFullSizePhotoViewController.h */,
+				475C333418A1DDCB00789A53 /* HRYFullSizePhotoViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -414,6 +419,7 @@
 				47ABC83818A0FB0A007A953F /* main.m in Sources */,
 				470F245F18A0FF0200DD05B0 /* HRYGalleryViewController.m in Sources */,
 				475C333218A1D78B00789A53 /* HRYCell.m in Sources */,
+				475C333518A1DDCB00789A53 /* HRYFullSizePhotoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

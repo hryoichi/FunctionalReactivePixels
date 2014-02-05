@@ -8,15 +8,14 @@
 
 @import UIKit;
 
+@class HRYFullSizePhotoViewModel;
+
 @protocol HRYFullSizePhotoViewControllerDelegate;
 
 @interface HRYFullSizePhotoViewController : UIViewController
 
-@property (nonatomic, copy, readonly) NSArray *photoModelArray;
 @property (nonatomic, weak) id <HRYFullSizePhotoViewControllerDelegate> delegate;
-
-- (instancetype)initWithPhotoModels:(NSArray *)photoModelArray
-                  currentPhotoIndex:(NSInteger)photoIndex;
+@property (nonatomic, strong) HRYFullSizePhotoViewModel *viewModel;
 
 @end
 

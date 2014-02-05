@@ -8,8 +8,11 @@
 
 @import Foundation;
 
+@class HRYPhotoModel;
+
 @interface HRYPhotoImporter : NSObject
 
 + (RACSignal *)importPhotos;
++ (RACSignal *)fetchPhotoDetails:(HRYPhotoModel *)photoModel;
 
 @end

@@ -14,6 +14,7 @@
 		470F246A18A108D400DD05B0 /* ConsumerKeySecret.plist in Resources */ = {isa = PBXBuildFile; fileRef = 470F246918A108D400DD05B0 /* ConsumerKeySecret.plist */; };
 		470F246E18A10E0F00DD05B0 /* HRYPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 470F246D18A10E0F00DD05B0 /* HRYPhotoModel.m */; };
 		470F247118A10E8900DD05B0 /* HRYPhotoImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 470F247018A10E8900DD05B0 /* HRYPhotoImporter.m */; };
+		471C673618A2298300A758FF /* HRYFullSizePhotoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 471C673518A2298300A758FF /* HRYFullSizePhotoViewModel.m */; };
 		475C333218A1D78B00789A53 /* HRYCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 475C333118A1D78B00789A53 /* HRYCell.m */; };
 		475C333518A1DDCB00789A53 /* HRYFullSizePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475C333418A1DDCB00789A53 /* HRYFullSizePhotoViewController.m */; };
 		475C333818A1E7F800789A53 /* HRYPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475C333718A1E7F800789A53 /* HRYPhotoViewController.m */; };
@@ -56,6 +57,8 @@
 		470F246D18A10E0F00DD05B0 /* HRYPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRYPhotoModel.m; path = Classes/Models/HRYPhotoModel.m; sourceTree = "<group>"; };
 		470F246F18A10E8900DD05B0 /* HRYPhotoImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRYPhotoImporter.h; path = Classes/Helpers/HRYPhotoImporter.h; sourceTree = "<group>"; };
 		470F247018A10E8900DD05B0 /* HRYPhotoImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRYPhotoImporter.m; path = Classes/Helpers/HRYPhotoImporter.m; sourceTree = "<group>"; };
+		471C673418A2298300A758FF /* HRYFullSizePhotoViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRYFullSizePhotoViewModel.h; path = Classes/ViewModels/HRYFullSizePhotoViewModel.h; sourceTree = "<group>"; };
+		471C673518A2298300A758FF /* HRYFullSizePhotoViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRYFullSizePhotoViewModel.m; path = Classes/ViewModels/HRYFullSizePhotoViewModel.m; sourceTree = "<group>"; };
 		475C333018A1D78B00789A53 /* HRYCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRYCell.h; path = Classes/Cells/HRYCell.h; sourceTree = "<group>"; };
 		475C333118A1D78B00789A53 /* HRYCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRYCell.m; path = Classes/Cells/HRYCell.m; sourceTree = "<group>"; };
 		475C333318A1DDCB00789A53 /* HRYFullSizePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRYFullSizePhotoViewController.h; path = Classes/ViewControllers/HRYFullSizePhotoViewController.h; sourceTree = "<group>"; };
@@ -113,6 +116,7 @@
 		470F245A18A0FE5A00DD05B0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				471C673318A2295C00A758FF /* ViewModels */,
 				475C332F18A1D76000789A53 /* Cells */,
 				470F246B18A10DE200DD05B0 /* Models */,
 				470F246518A1070300DD05B0 /* Helpers */,
@@ -162,6 +166,15 @@
 				470F246D18A10E0F00DD05B0 /* HRYPhotoModel.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		471C673318A2295C00A758FF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				471C673418A2298300A758FF /* HRYFullSizePhotoViewModel.h */,
+				471C673518A2298300A758FF /* HRYFullSizePhotoViewModel.m */,
+			);
+			name = ViewModels;
 			sourceTree = "<group>";
 		};
 		475C332F18A1D76000789A53 /* Cells */ = {
@@ -419,6 +432,7 @@
 				47ABC83C18A0FB0A007A953F /* HRYAppDelegate.m in Sources */,
 				475C333818A1E7F800789A53 /* HRYPhotoViewController.m in Sources */,
 				470F246418A0FF7800DD05B0 /* HRYGalleryFlowLayout.m in Sources */,
+				471C673618A2298300A758FF /* HRYFullSizePhotoViewModel.m in Sources */,
 				470F246E18A10E0F00DD05B0 /* HRYPhotoModel.m in Sources */,
 				470F246818A1072400DD05B0 /* HRYUserDefaults.m in Sources */,
 				470F247118A10E8900DD05B0 /* HRYPhotoImporter.m in Sources */,

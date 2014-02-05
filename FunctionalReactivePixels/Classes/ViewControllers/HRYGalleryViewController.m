@@ -10,10 +10,11 @@
 #import "HRYGalleryFlowLayout.h"
 #import "HRYPhotoImporter.h"
 #import "HRYCell.h"
+#import "HRYFullSizePhotoViewController.h"
 
 static NSString * const kCellIdentifier = @"Cell";
 
-@interface HRYGalleryViewController ()
+@interface HRYGalleryViewController () <HRYFullSizePhotoViewControllerDelegate>
 
 @property (nonatomic, strong) NSArray *photosArray;
 
@@ -80,6 +81,26 @@ static NSString * const kCellIdentifier = @"Cell";
     [cell setPhotoModel:self.photosArray[indexPath.row]];
 
     return cell;
+}
+
+#pragma mark - UICollectionViewDelegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    HRYFullSizePhotoViewController *viewController =
+    [[HRYFullSizePhotoViewController alloc] initWithPhotoModels:self.photosArray
+                                              currentPhotoIndex:indexPath.item];
+    viewController.delegate = self;
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+#pragma mark - HRYFullSizePhotoViewControllerDelegate
+
+- (void)userDidScroll:(HRYFullSizePhotoViewController *)viewController toPhotoAtIndex:(NSInteger)index
+{
+    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0]
+                                atScrollPosition:UICollectionViewScrollPositionCenteredVertically
+                                        animated:NO];
 }
 
 @end

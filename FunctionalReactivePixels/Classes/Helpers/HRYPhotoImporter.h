@@ -10,4 +10,6 @@
 
 @interface HRYPhotoImporter : NSObject
 
++ (RACSignal *)importPhotos;
+
 @end

@@ -8,13 +8,14 @@
 
 @import UIKit;
 
-@class HRYPhotoModel;
+@class HRYPhotoViewModel;
 
 @interface HRYPhotoViewController : UIViewController
 
 @property (nonatomic, assign, readonly) NSInteger photoIndex;
-@property (nonatomic, strong, readonly) HRYPhotoModel *photoModel;
+@property (nonatomic, strong, readonly) HRYPhotoViewModel *viewModel;
 
-- (instancetype)initWithPhotoModel:(HRYPhotoModel *)photoModel index:(NSInteger)photoIndex;
+- (instancetype)initWithViewModel:(HRYPhotoViewModel *)viewModel index:(NSInteger)photoIndex;
+
 
 @end

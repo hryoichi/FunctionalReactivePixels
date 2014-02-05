@@ -8,6 +8,16 @@
 
 #import "RVMViewModel.h"
 
+@class HRYPhotoModel;
+
 @interface HRYFullSizePhotoViewModel : RVMViewModel
+
+// Override property type of super class
+@property (nonatomic, strong, readonly) NSArray *model;
+@property (nonatomic, assign, readonly) NSInteger initialPhotoIndex;
+@property (nonatomic, strong, readonly) NSString *initialPhotoName;
+
+- (instancetype)initWithPhotoArray:(NSArray *)photoArray initialPhotoIndex:(NSInteger)initialPhotoIndex;
+- (HRYPhotoModel *)photoModelAtIndex:(NSInteger)index;
 
 @end

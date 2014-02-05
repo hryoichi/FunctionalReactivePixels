@@ -11,6 +11,7 @@
 
 @interface HRYCell ()
 
+// The image view is a weak property, since it will belong to its superview.
 @property (nonatomic, weak) UIImageView *imageView;
 @property (nonatomic, strong) RACDisposable *subscription;
 

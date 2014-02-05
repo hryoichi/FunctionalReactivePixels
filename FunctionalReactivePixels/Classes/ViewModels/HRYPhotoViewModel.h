@@ -8,6 +8,14 @@
 
 #import "RVMViewModel.h"
 
+@class HRYPhotoModel;
+
 @interface HRYPhotoViewModel : RVMViewModel
+
+@property (nonatomic, strong, readonly) HRYPhotoModel *model;
+@property (nonatomic, strong, readonly) UIImage *photoImage;
+@property (nonatomic, assign, readonly, getter = isLoading) BOOL loading;
+
+- (NSString *)photoName;
 
 @end

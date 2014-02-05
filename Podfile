@@ -2,7 +2,7 @@ platform :ios, "7.0"
 inhibit_all_warnings!
 
 pod 'ReactiveCocoa', '~> 2.2.3'
-pod 'ReactiveViewModel', '~> 0.2'
+pod 'ReactiveViewModel', '0.1.1'
 pod 'libextobjc', '~> 0.3'
 pod '500px-iOS-api', '~> 1.0.5'
 pod 'SVProgressHUD', '~> 1.0'

@@ -17,8 +17,6 @@ static NSString * const kCellIdentifier = @"Cell";
 
 @interface HRYGalleryViewController ()
 
-// NOTE: You must retain the delegate object
-@property (nonatomic, strong) id collectionViewDelegate;
 @property (nonatomic, strong) NSArray *photosArray;
 
 @end
@@ -49,25 +47,17 @@ static NSString * const kCellIdentifier = @"Cell";
         [self.collectionView reloadData];
     }];
 
-    RACDelegateProxy *viewControllerDelegate = [[RACDelegateProxy alloc] initWithProtocol:@protocol(HRYFullSizePhotoViewControllerDelegate)];
-
-    [[viewControllerDelegate
-      rac_signalForSelector:@selector(userDidScroll:toPhotoAtIndex:)
-      fromProtocol:@protocol(HRYFullSizePhotoViewControllerDelegate)] subscribeNext:^(RACTuple *value) {
+    [[self rac_signalForSelector:@selector(userDidScroll:toPhotoAtIndex:) fromProtocol:@protocol(HRYFullSizePhotoViewControllerDelegate)] subscribeNext:^(RACTuple *value) {
         @strongify(self);
-        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:[value.second integerValue] inSection:0];
-        [self.collectionView scrollToItemAtIndexPath:indexPath
-                                    atScrollPosition:UICollectionViewScrollPositionCenteredVertically
-                                            animated:NO];
+        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:[value.second  integerValue] inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:NO];
     }];
 
-    self.collectionViewDelegate = [[RACDelegateProxy alloc] initWithProtocol:@protocol(UICollectionViewDelegate)];
-    [[self.collectionViewDelegate rac_signalForSelector:@selector(collectionView:didSelectItemAtIndexPath:)]subscribeNext:^(RACTuple *arguments) {
+    [[self rac_signalForSelector:@selector(collectionView:didSelectItemAtIndexPath:) fromProtocol:@protocol(UICollectionViewDelegate)] subscribeNext:^(RACTuple *arguments) {
         @strongify(self);
         HRYFullSizePhotoViewController *viewController =
         [[HRYFullSizePhotoViewController alloc] initWithPhotoModels:self.photosArray
                                                   currentPhotoIndex:[(NSIndexPath *)arguments.second item]];
-        viewController.delegate = (id <HRYFullSizePhotoViewControllerDelegate>)viewControllerDelegate;
+        viewController.delegate = (id<HRYFullSizePhotoViewControllerDelegate>)self;
         [self.navigationController pushViewController:viewController animated:YES];
     }];
 
@@ -75,6 +65,9 @@ static NSString * const kCellIdentifier = @"Cell";
         @strongify(self);
         [self.collectionView reloadData];
     }] logError] catchTo:[RACSignal empty]];
+
+    // NOTE: Need to "reset" the cached values of respondsToSelector: of UIKit
+    self.collectionView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning

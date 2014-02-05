@@ -11,11 +11,14 @@
 #import "HRYPhotoImporter.h"
 #import "HRYCell.h"
 #import "HRYFullSizePhotoViewController.h"
+#import <ReactiveCocoa/ReactiveCocoa/RACDelegateProxy.h>
 
 static NSString * const kCellIdentifier = @"Cell";
 
-@interface HRYGalleryViewController () <HRYFullSizePhotoViewControllerDelegate>
+@interface HRYGalleryViewController ()
 
+// NOTE: You must retain the delegate object
+@property (nonatomic, strong) id collectionViewDelegate;
 @property (nonatomic, strong) NSArray *photosArray;
 
 @end
@@ -46,7 +49,32 @@ static NSString * const kCellIdentifier = @"Cell";
         [self.collectionView reloadData];
     }];
 
-    [self loadPopularPhotos];
+    RACDelegateProxy *viewControllerDelegate = [[RACDelegateProxy alloc] initWithProtocol:@protocol(HRYFullSizePhotoViewControllerDelegate)];
+
+    [[viewControllerDelegate
+      rac_signalForSelector:@selector(userDidScroll:toPhotoAtIndex:)
+      fromProtocol:@protocol(HRYFullSizePhotoViewControllerDelegate)] subscribeNext:^(RACTuple *value) {
+        @strongify(self);
+        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:[value.second integerValue] inSection:0];
+        [self.collectionView scrollToItemAtIndexPath:indexPath
+                                    atScrollPosition:UICollectionViewScrollPositionCenteredVertically
+                                            animated:NO];
+    }];
+
+    self.collectionViewDelegate = [[RACDelegateProxy alloc] initWithProtocol:@protocol(UICollectionViewDelegate)];
+    [[self.collectionViewDelegate rac_signalForSelector:@selector(collectionView:didSelectItemAtIndexPath:)]subscribeNext:^(RACTuple *arguments) {
+        @strongify(self);
+        HRYFullSizePhotoViewController *viewController =
+        [[HRYFullSizePhotoViewController alloc] initWithPhotoModels:self.photosArray
+                                                  currentPhotoIndex:[(NSIndexPath *)arguments.second item]];
+        viewController.delegate = (id <HRYFullSizePhotoViewControllerDelegate>)viewControllerDelegate;
+        [self.navigationController pushViewController:viewController animated:YES];
+    }];
+
+    RAC(self, photosArray) = [[[[HRYPhotoImporter importPhotos] doCompleted:^{
+        @strongify(self);
+        [self.collectionView reloadData];
+    }] logError] catchTo:[RACSignal empty]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,15 +85,6 @@ static NSString * const kCellIdentifier = @"Cell";
 #pragma mark - Public
 
 #pragma mark - Private
-
-- (void)loadPopularPhotos
-{
-    [[HRYPhotoImporter importPhotos] subscribeNext:^(id x) {
-        self.photosArray = x;
-    } error:^(NSError *error) {
-        NSLog(@"Couldn't fetch photos from 500px: %@", error);
-    }];
-}
 
 #pragma mark - UICollectionViewDataSource
 
@@ -81,26 +100,6 @@ static NSString * const kCellIdentifier = @"Cell";
     [cell setPhotoModel:self.photosArray[indexPath.row]];
 
     return cell;
-}
-
-#pragma mark - UICollectionViewDelegate
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    HRYFullSizePhotoViewController *viewController =
-    [[HRYFullSizePhotoViewController alloc] initWithPhotoModels:self.photosArray
-                                              currentPhotoIndex:indexPath.item];
-    viewController.delegate = self;
-    [self.navigationController pushViewController:viewController animated:YES];
-}
-
-#pragma mark - HRYFullSizePhotoViewControllerDelegate
-
-- (void)userDidScroll:(HRYFullSizePhotoViewController *)viewController toPhotoAtIndex:(NSInteger)index
-{
-    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0]
-                                atScrollPosition:UICollectionViewScrollPositionCenteredVertically
-                                        animated:NO];
 }
 
 @end

@@ -10,4 +10,7 @@
 
 @interface HRYGalleryViewModel : RVMViewModel
 
+// Override property type of super class
+@property (nonatomic, strong, readonly) NSArray *model;
+
 @end

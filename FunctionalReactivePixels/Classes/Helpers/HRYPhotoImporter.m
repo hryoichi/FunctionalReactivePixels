@@ -54,7 +54,13 @@
      completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
          if (data) {
              id results = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil][@"photo"];
-
+             [self configurePhotoModel:photoModel withDictionary:results];
+             [self downloadFullsizedImageForPhotoModel:photoModel];
+             [subject sendNext:photoModel];
+             [subject sendCompleted];
+         }
+         else {
+             [subject sendError:connectionError];
          }
     }];
 

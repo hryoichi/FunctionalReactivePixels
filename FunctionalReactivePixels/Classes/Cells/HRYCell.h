@@ -12,6 +12,6 @@
 
 @interface HRYCell : UICollectionViewCell
 
-- (void)setPhotoModel:(HRYPhotoModel *)photoModel;
+@property (nonatomic, strong) HRYPhotoModel *photoModel;
 
 @end

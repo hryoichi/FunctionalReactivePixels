@@ -13,7 +13,6 @@
 
 // The image view is a weak property, since it will belong to its superview.
 @property (nonatomic, weak) UIImageView *imageView;
-@property (nonatomic, strong) RACDisposable *subscription;
 
 @end
 
@@ -30,30 +29,17 @@
         imageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
         [self.contentView addSubview:imageView];
         self.imageView = imageView;
+
+        RAC(self.imageView, image) =
+        [[RACObserve(self, photoModel.thumbnailData) ignore:nil] map:^id(NSData *data) {
+            return [UIImage imageWithData:data];
+        }];
     }
     return self;
 }
 
 #pragma mark - Public
 
-- (void)setPhotoModel:(HRYPhotoModel *)photoModel
-{
-    self.subscription =
-    [[[RACObserve(photoModel, thumbnailData) filter:^BOOL(id value) {
-        return value != nil;
-    }] map:^id(id value) {
-        return [UIImage imageWithData:value];
-    }] setKeyPath:@keypath(self.imageView, image) onObject:self.imageView];
-}
-
 #pragma mark - Public (Override)
-
-- (void)prepareForReuse
-{
-    [super prepareForReuse];
-
-    [self.subscription dispose];
-    self.subscription = nil;
-}
 
 @end

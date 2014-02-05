@@ -8,6 +8,10 @@
 
 @import UIKit;
 
+@class HRYPhotoModel;
+
 @interface HRYCell : UICollectionViewCell
+
+- (void)setPhotoModel:(HRYPhotoModel *)photoModel;
 
 @end

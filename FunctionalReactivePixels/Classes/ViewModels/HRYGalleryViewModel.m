@@ -15,12 +15,21 @@
 
 @implementation HRYGalleryViewModel
 
+#pragma mark - Lifecycle
+
 - (instancetype)init
 {
     if (self = [super init]) {
-        RAC(self, model) = [[[HRYPhotoImporter importPhotos] logError] catchTo:[RACSignal empty]];
+        RAC(self, model) = [self importPhotosSignal];
     }
     return self;
+}
+
+#pragma mark - Private
+
+- (RACSignal *)importPhotosSignal
+{
+    return [[[HRYPhotoImporter importPhotos] logError] catchTo:[RACSignal empty]];
 }
 
 @end

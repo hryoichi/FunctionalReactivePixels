@@ -63,6 +63,19 @@ describe(NSStringFromClass([HRYPhotoViewModel class]), ^{
 
         [mockViewModel verify];
     });
+
+    it (@"should return the correct photo name", ^{
+        NSString *name = @"Ash";
+
+        HRYPhotoModel *photoModel = [[HRYPhotoModel alloc] init];
+        photoModel.photoName = name;
+
+        HRYPhotoViewModel *viewModel = [[HRYPhotoViewModel alloc] initWithModel:photoModel];
+
+        NSString *returnedName = [viewModel photoName];
+
+        EXP_expect(name).to.equal(returnedName);
+    });
 });
 
 SpecEnd

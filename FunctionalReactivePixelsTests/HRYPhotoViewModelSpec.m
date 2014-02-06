@@ -12,6 +12,12 @@
 #import "HRYPhotoViewModel.h"
 #import "HRYPhotoModel.h"
 
+@interface HRYPhotoViewModel ()
+
+- (void)downloadPhotoModelDetails;
+
+@end
+
 SpecBegin(HRYPhotoViewModel)
 
 describe(NSStringFromClass([HRYPhotoViewModel class]), ^{
@@ -29,6 +35,17 @@ describe(NSStringFromClass([HRYPhotoViewModel class]), ^{
 
         EXP_expect(returnedName).to.equal(name);
         [mockPhotoModel stopMocking];
+    });
+
+    it(@"should download photo model details when it becomes active", ^{
+        HRYPhotoViewModel *viewModel = [[HRYPhotoViewModel alloc] initWithModel:nil];
+
+        id mockViewModel = [OCMockObject partialMockForObject:viewModel];
+        [[mockViewModel expect] downloadPhotoModelDetails];
+
+        [mockViewModel setActive:YES];
+
+        [mockViewModel verify];
     });
 });
 

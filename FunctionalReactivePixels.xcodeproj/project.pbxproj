@@ -34,6 +34,7 @@
 		47ABC85518A0FB0A007A953F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47ABC85318A0FB0A007A953F /* InfoPlist.strings */; };
 		47D1698618A39C8D00EF3B4B /* HRYFullSizePhotoViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D1698518A39C8C00EF3B4B /* HRYFullSizePhotoViewModelSpec.m */; };
 		47D1698818A3A41800EF3B4B /* HRYGalleryViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D1698718A3A41800EF3B4B /* HRYGalleryViewModelSpec.m */; };
+		47D1698A18A3A78C00EF3B4B /* HRYPhotoViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D1698918A3A78C00EF3B4B /* HRYPhotoViewModelSpec.m */; };
 		69D12598CAB94A668B0CF6B4 /* libPods-FunctionalReactivePixelsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C4E96C950F42E68DEDC578 /* libPods-FunctionalReactivePixelsTests.a */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +91,7 @@
 		47ABC85418A0FB0A007A953F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		47D1698518A39C8C00EF3B4B /* HRYFullSizePhotoViewModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRYFullSizePhotoViewModelSpec.m; sourceTree = "<group>"; };
 		47D1698718A3A41800EF3B4B /* HRYGalleryViewModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRYGalleryViewModelSpec.m; sourceTree = "<group>"; };
+		47D1698918A3A78C00EF3B4B /* HRYPhotoViewModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRYPhotoViewModelSpec.m; sourceTree = "<group>"; };
 		72C4E96C950F42E68DEDC578 /* libPods-FunctionalReactivePixelsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FunctionalReactivePixelsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87B9EE13ED542639BC20C64 /* Pods-FunctionalReactivePixelsTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunctionalReactivePixelsTests.xcconfig"; path = "Pods/Pods-FunctionalReactivePixelsTests.xcconfig"; sourceTree = "<group>"; };
 		E3D87C8D11A3404EA8D5DD00 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 			children = (
 				47D1698518A39C8C00EF3B4B /* HRYFullSizePhotoViewModelSpec.m */,
 				47D1698718A3A41800EF3B4B /* HRYGalleryViewModelSpec.m */,
+				47D1698918A3A78C00EF3B4B /* HRYPhotoViewModelSpec.m */,
 				47ABC85118A0FB0A007A953F /* Supporting Files */,
 			);
 			path = FunctionalReactivePixelsTests;
@@ -462,6 +465,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47D1698A18A3A78C00EF3B4B /* HRYPhotoViewModelSpec.m in Sources */,
 				47D1698818A3A41800EF3B4B /* HRYGalleryViewModelSpec.m in Sources */,
 				47D1698618A39C8D00EF3B4B /* HRYFullSizePhotoViewModelSpec.m in Sources */,
 			);

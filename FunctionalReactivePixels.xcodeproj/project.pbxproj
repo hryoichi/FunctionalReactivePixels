@@ -32,7 +32,6 @@
 		47ABC84C18A0FB0A007A953F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ABC82B18A0FB0A007A953F /* Foundation.framework */; };
 		47ABC84D18A0FB0A007A953F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ABC82F18A0FB0A007A953F /* UIKit.framework */; };
 		47ABC85518A0FB0A007A953F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47ABC85318A0FB0A007A953F /* InfoPlist.strings */; };
-		47ABC85718A0FB0A007A953F /* FunctionalReactivePixelsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ABC85618A0FB0A007A953F /* FunctionalReactivePixelsTests.m */; };
 		47D1698618A39C8D00EF3B4B /* HRYFullSizePhotoViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D1698518A39C8C00EF3B4B /* HRYFullSizePhotoViewModelSpec.m */; };
 		69D12598CAB94A668B0CF6B4 /* libPods-FunctionalReactivePixelsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C4E96C950F42E68DEDC578 /* libPods-FunctionalReactivePixelsTests.a */; };
 /* End PBXBuildFile section */
@@ -88,7 +87,6 @@
 		47ABC84A18A0FB0A007A953F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		47ABC85218A0FB0A007A953F /* FunctionalReactivePixelsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FunctionalReactivePixelsTests-Info.plist"; sourceTree = "<group>"; };
 		47ABC85418A0FB0A007A953F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		47ABC85618A0FB0A007A953F /* FunctionalReactivePixelsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionalReactivePixelsTests.m; sourceTree = "<group>"; };
 		47D1698518A39C8C00EF3B4B /* HRYFullSizePhotoViewModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRYFullSizePhotoViewModelSpec.m; sourceTree = "<group>"; };
 		72C4E96C950F42E68DEDC578 /* libPods-FunctionalReactivePixelsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FunctionalReactivePixelsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87B9EE13ED542639BC20C64 /* Pods-FunctionalReactivePixelsTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunctionalReactivePixelsTests.xcconfig"; path = "Pods/Pods-FunctionalReactivePixelsTests.xcconfig"; sourceTree = "<group>"; };
@@ -260,7 +258,6 @@
 		47ABC85018A0FB0A007A953F /* FunctionalReactivePixelsTests */ = {
 			isa = PBXGroup;
 			children = (
-				47ABC85618A0FB0A007A953F /* FunctionalReactivePixelsTests.m */,
 				47D1698518A39C8C00EF3B4B /* HRYFullSizePhotoViewModelSpec.m */,
 				47ABC85118A0FB0A007A953F /* Supporting Files */,
 			);
@@ -463,7 +460,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				47D1698618A39C8D00EF3B4B /* HRYFullSizePhotoViewModelSpec.m in Sources */,
-				47ABC85718A0FB0A007A953F /* FunctionalReactivePixelsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

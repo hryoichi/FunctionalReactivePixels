@@ -6,29 +6,25 @@
 //  Copyright (c) 2014年 Ryoichi Hara. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
+#import <OCMock/OCMock.h>
+#import "HRYPhotoModel.h"
+#import "HRYFullSizePhotoViewModel.h"
 
-@interface HRYFullSizePhotoViewModelSpec : XCTestCase
+SpecBegin(HRYFullSizePhotoViewModel)
 
-@end
+describe(NSStringFromClass([HRYFullSizePhotoViewModel class]), ^{
+    it(@"should assign correct attributes when initialized.", ^{
+        NSArray *model = @[];
+        NSInteger initialPhotoIndex = 1337;
 
-@implementation HRYFullSizePhotoViewModelSpec
+        HRYFullSizePhotoViewModel *viewModel =
+        [[HRYFullSizePhotoViewModel alloc] initWithPhotoArray:model
+                                            initialPhotoIndex:initialPhotoIndex];
+        EXP_expect(model).to.equal(viewModel.model);
+        EXP_expect(initialPhotoIndex).to.equal(viewModel.initialPhotoIndex);
+    });
+});
 
-- (void)setUp
-{
-    [super setUp];
-    // Put setup code here; it will be run once, before the first test case.
-}
-
-- (void)tearDown
-{
-    // Put teardown code here; it will be run once, after the last test case.
-    [super tearDown];
-}
-
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
-}
-
-@end
+SpecEnd

@@ -37,6 +37,22 @@ describe(NSStringFromClass([HRYPhotoViewModel class]), ^{
         [mockPhotoModel stopMocking];
     });
 
+    it (@"should correctly map image data to UIImage", ^{
+        UIImage *image = [UIImage new];
+        NSData *imageData = [NSData data];
+
+        id mockImage = [OCMockObject mockForClass:[UIImage class]];
+        [[[mockImage stub] andReturn:image] imageWithData:imageData];
+
+        HRYPhotoModel *photoModel = [[HRYPhotoModel alloc] init];
+        photoModel.fullsizedData = imageData;
+
+        __unused HRYPhotoViewModel *viewModel = [[HRYPhotoViewModel alloc] initWithModel:photoModel];
+
+        [mockImage verify];
+        [mockImage stopMocking];
+    });
+
     it(@"should download photo model details when it becomes active", ^{
         HRYPhotoViewModel *viewModel = [[HRYPhotoViewModel alloc] initWithModel:nil];
 

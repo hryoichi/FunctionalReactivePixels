@@ -17,6 +17,8 @@
 
 @implementation HRYFullSizePhotoViewModel
 
+#pragma mark - Lifecycle
+
 - (instancetype)initWithPhotoArray:(NSArray *)photoArray initialPhotoIndex:(NSInteger)initialPhotoIndex
 {
     if (self = [super initWithModel:photoArray]) {
@@ -25,9 +27,12 @@
     return self;
 }
 
+#pragma mark - Public
+
 - (NSString *)initialPhotoName
 {
-    return [[self photoModelAtIndex:self.initialPhotoIndex] photoName];
+    HRYPhotoModel *photoModel = [self initialPhotoModel];
+    return [photoModel photoName];
 }
 
 - (HRYPhotoModel *)photoModelAtIndex:(NSInteger)index
@@ -38,6 +43,13 @@
     else {
         return self.model[index];
     }
+}
+
+#pragma mark - Private
+
+- (HRYPhotoModel *)initialPhotoModel
+{
+    return [self photoModelAtIndex:self.initialPhotoIndex];
 }
 
 @end

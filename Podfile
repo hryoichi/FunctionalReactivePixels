@@ -11,7 +11,7 @@ pod 'AFImageDownloader', '~> 1.0.0'
 target "FunctionalReactivePixelsTests", :exclusive => true do
 
 pod 'Specta', '~> 0.2.1'
-pod 'Expecta', '~> 0.2.3'
+pod 'Expecta', '~> 0.3'
 pod 'OCMock', '~> 2.2.2'
 
 end
